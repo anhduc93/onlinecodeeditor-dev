@@ -1,0 +1,17 @@
+application: ringed-magpie-725
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /ace-builds
+  static_dir: ace-builds
+- url: /.*
+  script: codeeditor.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
